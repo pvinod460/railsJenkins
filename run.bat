@@ -1,6 +1,5 @@
-start cmd /k wget
 cd tmp/pids
 del *.pid
 cd ..
 cd ..
-start rails s -p 3001
+start /c rails s -p 3001

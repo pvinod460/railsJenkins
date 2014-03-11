@@ -1,1 +1,1 @@
-rails s -p 3001 -e test
+rails s -p 3001

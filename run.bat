@@ -1,3 +1,4 @@
+exit 0
 cd tmp/pids
 del *.pid
-rails s -p 3001
+start rails s -p 3001

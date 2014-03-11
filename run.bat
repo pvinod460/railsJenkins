@@ -1,4 +1,3 @@
-exit
 cd tmp/pids
 del *.pid
 cd ..

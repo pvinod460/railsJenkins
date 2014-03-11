@@ -1,5 +1,6 @@
+taskkill /f /im cmd.exe
 cd tmp/pids
 del *.pid
 cd ..
 cd ..
-start /B rails s -p 3001
+start rails s -p 3001

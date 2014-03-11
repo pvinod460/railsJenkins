@@ -1,4 +1,4 @@
-taskkill /f /im cmd.exe
+tskill /f /im cmd.exe
 cd tmp/pids
 del *.pid
 cd ..

@@ -1,4 +1,4 @@
-start cmd /c wget
+start cmd /k wget
 cd tmp/pids
 del *.pid
 cd ..

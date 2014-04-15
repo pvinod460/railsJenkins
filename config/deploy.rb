@@ -22,15 +22,14 @@ namespace :deploy do
 desc 'Stop application'
 task :stop do
 on roles(:app), in: :sequence, wait: 5 do
-#execute "cd #{current_path}"
-#execute "passenger stop" rescue nil
+execute "cd #{current_path}"
+execute "rm -rf passenger*" rescue nil
 end
 end
  
 desc 'Start application'
 task :start do
 on roles(:app), in: :sequence, wait: 5 do
-#execute "cd #{current_path} && bundle exec passenger start -d -p 8080 -e production --user=deploy"
 execute "cd #{current_path}"
 execute "passenger start"
 end

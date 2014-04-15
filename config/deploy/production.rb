@@ -15,4 +15,4 @@ set :stage, :production
 # definition into the server list. The second argument
 # something that quacks like a hash can be used to set
 # extended properties on the server.
-server '10.10.3.34', user: 'deployer', password: 'deployer', roles: %w{web app}, my_property: :my_value
+#server '10.10.3.34', user: 'deployer', password: 'deployer', roles: %w{web app}, my_property: :my_value

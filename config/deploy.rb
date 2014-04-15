@@ -22,7 +22,7 @@ namespace :deploy do
 desc 'Stop application'
 task :stop do
 on roles(:app), in: :sequence, wait: 5 do
-run "cd #{current_path}"
+execute "cd #{current_path}"
 execute "rm -rf passenger*" rescue nil
 end
 end
@@ -30,7 +30,7 @@ end
 desc 'Start application'
 task :start do
 on roles(:app), in: :sequence, wait: 5 do
-#run "cd #{current_path}"
+#execute "cd #{current_path}"
 execute "passenger start"
 end
 end

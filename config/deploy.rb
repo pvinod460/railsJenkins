@@ -30,8 +30,7 @@ end
 desc 'Start application'
 task :start do
 on roles(:app), in: :sequence, wait: 5 do
-#execute "cd #{current_path}"
-#execute "passenger start"
+execute "passenger start"
 end
 end
  

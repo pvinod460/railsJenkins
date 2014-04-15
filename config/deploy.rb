@@ -3,7 +3,7 @@ set :repo_url, "https://github.com/pvinod460/railsJenkins.git"
  
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
  
-set :deploy_to, "/home/vinodp/railsJenkins"
+set :deploy_to, "/"
 # set :scm, :git
  
 set :format, :pretty

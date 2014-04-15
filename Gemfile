@@ -23,6 +23,8 @@ group :development do
   gem 'capistrano', '~> 3.0.0', require: false 
 end
 
+gem 'bundler'
+
 gem 'net-ssh', '~> 2.8.1', :git => "https://github.com/net-ssh/net-ssh"
 
 # Use jquery as the JavaScript library

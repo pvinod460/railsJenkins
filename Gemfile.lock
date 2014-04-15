@@ -126,6 +126,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bundler
   capistrano (~> 3.0.0)
   coffee-rails (~> 4.0.0)
   jbuilder (~> 1.2)

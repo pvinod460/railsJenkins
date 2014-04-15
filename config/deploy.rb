@@ -3,14 +3,14 @@ set :repo_url, "https://github.com/pvinod460/railsJenkins.git"
  
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
  
-set :deploy_to, "/home/vinodp/railsJenkins"
+set :deploy_to, "/home/vinodp/railsJenkinsNew"
 # set :scm, :git
  
 set :format, :pretty
 set :log_level, :debug
 set :pty, true
  
-set :user, 'deployer'
+set :user, 'vinodp'
  
 #set :linked_files, %w{config/database.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
@@ -22,8 +22,8 @@ namespace :deploy do
 desc 'Stop application'
 task :stop do
 on roles(:app), in: :sequence, wait: 5 do
-#execute "cd #{current_path} && bundle exec passenger stop -p 8080" rescue nil
-#execute "cd #{current_path} && bundle exec passenger stop" rescue nil
+execute "cd #{current_path}"
+execute "passenger stop" rescue nil
 end
 end
  
@@ -32,7 +32,7 @@ task :start do
 on roles(:app), in: :sequence, wait: 5 do
 #execute "cd #{current_path} && bundle exec passenger start -d -p 8080 -e production --user=deploy"
 execute "cd #{current_path}"
-execute "bundle exec passenger start"
+execute "passenger start"
 end
 end
  

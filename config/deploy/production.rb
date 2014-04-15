@@ -5,9 +5,9 @@ set :stage, :production
 # Supports bulk-adding hosts to roles, the primary
 # server in each group is considered to be the first
 # unless any hosts have the primary property set.
-role :app, %w{vinodp@10.10.3.34}
-role :web, %w{vinodp@10.10.3.34}
-role :db, %w{vinodp@10.10.3.34}
+role :app, %w{deployer@10.10.3.34}
+role :web, %w{deployer@10.10.3.34}
+role :db, %w{deployer@10.10.3.34}
  
 # Extended Server Syntax
 # ======================
@@ -15,4 +15,4 @@ role :db, %w{vinodp@10.10.3.34}
 # definition into the server list. The second argument
 # something that quacks like a hash can be used to set
 # extended properties on the server.
-server '10.10.3.34', user: 'vinodp', password: 'V697371vin.', roles: %w{web app}, my_property: :my_value
+server '10.10.3.34', user: 'deployer', password: 'deployer', roles: %w{web app}, my_property: :my_value

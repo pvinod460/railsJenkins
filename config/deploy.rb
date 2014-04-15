@@ -10,7 +10,7 @@ set :format, :pretty
 set :log_level, :debug
 set :pty, true
  
-set :user, 'vinodp'
+set :user, 'deployer'
  
 #set :linked_files, %w{config/database.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
@@ -22,8 +22,8 @@ namespace :deploy do
 desc 'Stop application'
 task :stop do
 on roles(:app), in: :sequence, wait: 5 do
-execute "cd #{current_path}"
-execute "passenger stop" rescue nil
+#execute "cd #{current_path}"
+#execute "passenger stop" rescue nil
 end
 end
  
